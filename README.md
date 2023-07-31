@@ -26,8 +26,9 @@ Commands:
 "pc add" [n] - add [n] to the program counter
 "pc sub", "pc subtract" - subtract [n] from the program counter
 "q", "quit" - exit
-NOTE: You can also type out any valid and supported MIPS instruction in interactive mode to execute it immediately without incrementing the program counter. Invalid MIPS commands might crash the program.
 ```
+NOTE: You can also type out any valid and supported MIPS instruction in interactive mode to execute it immediately without incrementing the program counter. Invalid MIPS commands might crash the program.
+
 Current supported MIPS instructions:
 ```
 add, or, and, sll, sub, slt, jr

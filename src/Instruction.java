@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Instruction {
+public abstract class Instruction {
     public enum Opcode {
         and,
         or,
@@ -49,6 +49,13 @@ public class Instruction {
 
     public Opcode opcode;
     public String[] split;
+
+    public abstract void parse(int currLine);
+
+    public abstract void execute(Memory m, Registers r);
+    
+    public abstract String binary();
+
     public static String convertRegister(String reg){
         int num = registers.indexOf(reg);
         if(reg.equals("zero")){
@@ -85,16 +92,5 @@ public class Instruction {
             num = num.substring(num.length() - len);
         }
         return num;
-    }
-
-    public void parse(int currLine){
-
-    }
-    public void execute(Memory m, Registers r){
-
-    }
-
-    public String binary(){
-        return "No subclass";
     }
 }

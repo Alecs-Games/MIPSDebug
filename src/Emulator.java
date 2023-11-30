@@ -14,14 +14,17 @@ public class Emulator {
 
     public static String HELP_MESSAGE = """
 
-            h = show help
-            d = dump register state
-            s = single step through the program (i.e. execute 1 instruction and stop)
-            s num = step through num instructions of the program
-            r = run until the program ends
-            m num1 num2 = display data memory from location num1 to num2
-            c = clear all registers, memory, and the program counter to 0
-            q = exit the program
+    "h", "help" - print out a usage message
+    "d", "dump" - print program counter and status of all registers
+    "s", "step" - execute a single line
+    "s", "step" [n] - execute [n] number of lines
+    "r", "run" - run until end of file
+    "m", "mem", "memory" [n1] [n2] - print out all memory from address [n1] to address [n2]
+    "c", "clear" - clear all memory and reset program counter
+    "pc" - print out the program counter
+    "pc add" [n] - add [n] to the program counter
+    "pc sub", "pc subtract" - subtract [n] from the program counter
+    "q", "quit" - exit
 
             """;
     public static String VALID_FLAGS = "Valid flags: -v";

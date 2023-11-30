@@ -1,5 +1,5 @@
-#This is test program 1
-#This computes the sum of 1 to 10
+#This is a simple program to test out the debugger with
+#Computes the sum from 1 to 10
 	
 	addi $a0, $a0, 10 # load $a0 with 10
 loop:	add $s0, $s0, $a0

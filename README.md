@@ -7,11 +7,11 @@ javac *.java
 ```
 To run in interactive mode from a .asm file:
 ```
-java MIPSDebug file.asm
+java MIPSDebug sample.asm
 ```
 To run in script mode, which automatically enters commands from a file, with one command on each line:
 ```
-java MIPSDebug file.asm script
+java MIPSDebug sample.asm script
 ```
 Commands:
 ```
@@ -38,15 +38,5 @@ j, jal
 Current available registers:
 ```
 0, v0, v1, a0, a1, a2, a3, t0, t1, t2, t3, t4, t5, t6, t7, s0, s1, s2, s3, s4 ,s5, s6, s7, t8, t9, sp, ra
-```
-A sample of what a compatible .asm file looks like:
-```
-#Compute the sum of 1 through 10
-	
-	addi $a0, $a0, 10 # load $a0 with 10
-loop:	add $s0, $s0, $a0
-	sw $a0, 0($a0) 
-	addi $a0, $a0, -1  # decrement $a0
-	bne $a0, $0, loop  # if $a0 equals 0 then break out of the loop
 ```
 	
